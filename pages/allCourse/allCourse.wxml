@@ -1,12 +1,24 @@
 <!--pages/allCourse/allCourse.wxml-->
-<page-meta>
-  <navigation-bar
-    title="111"
-    loading="{{nbLoading}}"
-    front-color="{{nbFrontColor}}"
-    background-color="{{nbBackgroundColor}}"
-    color-animation-duration="2000"
-    color-animation-timing-func="easeIn"
-  />
-</page-meta>
+<!-- 模块二：美容项目的导航栏 -->
+<view class="nav_top">
+      <block wx:for="{{navTopItems}}" wx:key="key">
+        <!-- 判断id是否为 1，显示颜色 -->
+        <!-- {{逻辑判断表达式?true:false;}} -->
+        <!-- index:循环的当前内容的下标 -->
+        <!-- data-index data-id：在标签里面自定义属性 -->
+         <!-- bindtap添加点击事件
+          data-* 自定义数据 -->
+        <view class="nav_top_items {{curNavId == item.id?'active_'+colors[index]:''}}" data-index="{{index}}"
+          data-title="{{item.title}}" bindtap="chooseTab">
+         
+          <!-- bindtap 当用户点击该组件触发，调用Page对象中的函数处理
+               switchTap函数：切换点击导航状态，变颜色 -->
+
+          <!-- 显示标题图 -->
+          <image src="{{item.url}}" mode="aspectFill"></image>
+          <!-- 显示标题文本 -->
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
 

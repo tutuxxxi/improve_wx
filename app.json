@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/allCourse/allCourse",
-    
     "pages/index/index",
     "pages/logs/logs",
     "pages/course/course"
