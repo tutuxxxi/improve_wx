@@ -1,1 +1,90 @@
 /* pages/user.wxss */
+/*头部用户信息*/
+.head{
+  height:200rpx;
+  width:750rpx;
+}
+/*用户头像*/
+.head view.userIcon{
+  height:200rpx;
+  width:200rpx;
+  float:left;
+}
+
+.head image.userIcon{
+  margin: 20rpx;
+  border-radius: 100rpx;
+  width:160rpx;
+  height:160rpx;
+}
+
+/*用户名*/
+.head view.username{
+  height:60rpx;
+  width:250rpx;
+  float:left;
+}
+
+.head text.username{
+  
+}
+/*用户徽章*/
+.head view.badge{
+  background-color: yellowgreen;
+  height:60rpx;
+  width:300rpx;
+  float:left;
+}
+/*个性签名*/
+.head view.profile{
+  border: 1rpx solid black;
+  border-radius: 16rpx;
+  height:138rpx;
+  width:549rpx;
+  float:left;
+}
+
+.head text.profile{
+  width: 502rpx;
+  height: 40rpx;
+  margin-left: 48rpx;
+  font-size: 24rpx;
+  line-height:24rpx;
+  position:relative;
+  top:-10rpx;
+  left:13rpx
+}
+
+
+/*身体信息*/
+.body{
+  height:354rpx;
+  width:750rpx;
+}
+
+.body .table {
+ border-bottom: 1px solid black;
+}
+.body .tr {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ height: 70rpx;
+ align-items: center;
+}
+.body .th {
+  border: 1px solid rgb(173, 161, 161);
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+}
+.body .message{
+  color: gray;
+  font-size:26rpx;
+  justify-content: center;
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+}

@@ -1,24 +1,58 @@
-<view style="background-color:red;height:200rpx;width:750rpx">
-    <view style="background-color:blue;height:100%;width:33%;float:left">
-    头像
+<view class="head">
+    <!-- 用户头像 -->
+    <view class="userIcon">
+        <image wx:if="{{user.userIcon != null}}" class="userIcon" src='{{baseImageAddress}}{{user.userIcon}}'></image> 
+        <image wx:if="{{user.userIcon == null}}" class="userIcon" src='{{baseImageAddress}}default.png'></image> 
     </view>
-    <view style="background-color:yellow;height:30%;width:33%;float:left">
-    用户名
+    <!-- 用户名 -->
+    <view class="username">
+        <text class="username">{{user.username}}</text>
     </view>
-    <view style="background-color:blue;height:30%;width:34%;float:left">
+    <!-- 用户徽章 -->
+    <view class="badge">
     徽章
     </view>
-    <view style="background-color:green;height:70%;width:67%;float:left">
-    个性签名
+    <!-- 个性签名 -->
+    <view class="profile">
+        <text style="font-size: 30rpx;">个性签名\n</text>
+        <text wx:if="{{user.profile != null}}" class="profile">{{user.profile}}</text>
+        <text wx:if="{{user.profile == null}}" class="profile">您还没有个性签名</text>
     </view>
 </view>
 
-<view style="background-color:red;height:400rpx;width:750rpx">
-(日历)每月打卡完成
+<view style="height:600rpx;width:750rpx">
+  <calendar 
+	currentYear='2021'
+	currentMonth="1"
+	bindsendObj='getCalendarData'>
+  </calendar>
 </view>
-<view style="background-color:yellow;height:550rpx;width:750rpx">
-身体信息
+
+<view class="body">
+    <view class="table">
+      <view class="tr">
+          <view class="th">身高（cm）</view>
+          <view class="th">{{body.height}}</view>
+      </view>
+      <view class="tr">
+          <view class="th">体重（kg）</view>
+          <view class="th">{{body.weight}}</view>
+      </view>
+      <view class="tr">
+          <view class="th">三围</view>
+          <view class="th">{{body.chestCircumference}}/{{body.waistline}}/{{body.hipline}}</view>
+      </view>
+      <view class="tr">
+          <view class="th">体脂肪率（%）</view>
+          <view class="th">{{body.bodyFatRate}}</view>
+      </view>
+    </view>
+    <view class="message">
+      <text>我们将会根据您的数据为您推荐最适合您的课程</text>
+    </view>
+    
 </view>
-<view style="background-color:blue;height:130rpx;width:750rpx">
-退出登录
+<view style="height:130rpx;width:750rpx;padding-top:20px;">
+<view style="border: 1rpx solid black;border-radius:50rpx;justify-content: center;display: flex;">退出登录</view>
+
 </view>
