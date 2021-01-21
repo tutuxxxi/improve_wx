@@ -1,2 +1,24 @@
-<!--pages/user.wxml-->
-<text>pages/user.wxml</text>
+<view style="background-color:red;height:200rpx;width:750rpx">
+    <view style="background-color:blue;height:100%;width:33%;float:left">
+    头像
+    </view>
+    <view style="background-color:yellow;height:30%;width:33%;float:left">
+    用户名
+    </view>
+    <view style="background-color:blue;height:30%;width:34%;float:left">
+    徽章
+    </view>
+    <view style="background-color:green;height:70%;width:67%;float:left">
+    个性签名
+    </view>
+</view>
+
+<view style="background-color:red;height:400rpx;width:750rpx">
+(日历)每月打卡完成
+</view>
+<view style="background-color:yellow;height:550rpx;width:750rpx">
+身体信息
+</view>
+<view style="background-color:blue;height:130rpx;width:750rpx">
+退出登录
+</view>
