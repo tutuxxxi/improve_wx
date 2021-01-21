@@ -1,24 +1,61 @@
 <!--pages/allCourse/allCourse.wxml-->
-<!-- 模块二：美容项目的导航栏 -->
-<view class="nav_top">
-      <block wx:for="{{navTopItems}}" wx:key="key">
-        <!-- 判断id是否为 1，显示颜色 -->
-        <!-- {{逻辑判断表达式?true:false;}} -->
-        <!-- index:循环的当前内容的下标 -->
-        <!-- data-index data-id：在标签里面自定义属性 -->
-         <!-- bindtap添加点击事件
-          data-* 自定义数据 -->
-        <view class="nav_top_items {{curNavId == item.id?'active_'+colors[index]:''}}" data-index="{{index}}"
-          data-title="{{item.title}}" bindtap="chooseTab">
-         
-          <!-- bindtap 当用户点击该组件触发，调用Page对象中的函数处理
-               switchTap函数：切换点击导航状态，变颜色 -->
+<!-- TODO
+  1.透明度矫正
+  2.搜索框添加
+  3.后台删除课程时同时删除对应图片和视频
 
-          <!-- 显示标题图 -->
-          <image src="{{item.url}}" mode="aspectFill"></image>
-          <!-- 显示标题文本 -->
-          <text>{{item.title}}</text>
+ -->
+<!-- 总页面 -->
+<view>
+  <!-- 导航栏 -->
+  <view class="nav_top">
+    <!-- for循环遍历导航栏 -->
+    <scroll-view class="nav_top_all" scroll-x="true" show-scrollbar="false" scroll-with-animation="true">
+      <!-- bindtap添加点击事件 data-* 自定义数据 -->
+      <block wx:for="{{navTopItems}}" wx:key="key">
+        <view class="nav_top_all_items {{index == current ? 'active':''}}" data-title="{{item}}" bindtap="chooseNav"
+          data-index="{{index}}">
+          {{item}}
         </view>
       </block>
-    </view>
+    </scroll-view>
+  </view>
 
+  <view class="body">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="search">
+      <input class="search_input" placeholder="请输入需要搜索的内容" maxlength="10" bindinput="changeSearch" bindconfirm="sendSearch" value="{{searchVal}}"
+        confirm-type="search" />
+      
+      <view class="search_res">
+        <block wx:if="{{searchResult}}!=null||{{searchResult.length}}!=0" wx:for="{{searchResult}}">
+          <view class="search_res_text" bindtap="chooseSearchResult" data-val="{{item.cid}}">
+            {{item.cname}}-{{item.cKeyword}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 显示课程内容 -->
+  <scroll-view class="main">
+    <scroll-view class="mian_items">
+      <block wx:for="{{courses}}" wx:key="key">
+        <view class="mian_items_">
+        <!-- 背景图片 -->
+        <view class="main_items_img" style="background-image:url('{{item.cpurl}}')"></view>
+        <!-- 内容 -->
+        <view class="main_itmes_item">
+          <view class="main_itmes_item_keyword main_itmes_item_test">{{item.cKeyword}}</view>
+          <view class="main_itmes_item_name main_itmes_item_test">{{item.cname}}</view>
+          <view class="main_itmes_item_time main_itmes_item_test">{{item.ctime}}秒运动</view>
+        </view>
+      </view>
+      </block>
+
+
+    </scroll-view>
+  </scroll-view>
+</view>
+</view>

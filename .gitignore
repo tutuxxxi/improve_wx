@@ -3,9 +3,6 @@
 Thumbs.db
 $RECYCLE.BIN/
 
-# 微信小程序配置文件
-project.config.json
-
 # macOS
 .DS_Store
 .fseventsd

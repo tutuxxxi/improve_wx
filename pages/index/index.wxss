@@ -1,21 +1,140 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.timeArea{
+  height: 3rem;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+#timeIcon, #timeText{
+  display: inline-block;
+  vertical-align: auto;
+  height: 1.6rem;
+  vertical-align: middle;
+  margin: 0.7rem 0 0;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+#timeIcon{
+  width: 25%;
+}
+#timeText{
+  width: 75%;
 }
 
-.usermotto {
-  margin-top: 200px;
+#timeIcon image{
+  height: 1.6rem;
+  width: 1.6rem;
+  float: right;
+}
+
+#timeText text{
+  size: 1.2rem;
+  line-height: 1.8rem;
+  margin-left: 2rem;
+}
+
+
+
+.planArea{
+  padding-top: 1rem;
+}
+
+.plan{
+  border-radius: 8px;
+  border: #8f8f8f 2px solid;
+  width: 96%;
+  margin: 0 auto;
+  height: 4.7rem;
+  margin-bottom: 1rem;
+}
+
+.plan .icon, .plan .info{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.plan .icon{
+  width: 30%;
+}
+
+.plan .info{
+  width: 70%;
+}
+
+
+.icon image{
+  width: 3.5rem;
+  height: 3.5rem;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.info .info_name{
+  height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.info .info_keywords{
+  height: 0.8rem;
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  margin-left: 1rem;
+}
+
+
+
+.info .info_date{
+  height: 1rem;
+}
+
+.info_date .startTime, .info_date .endTime{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.6rem;
+}
+
+.startTime{
+  width: 60%;
+  text-align: right;
+}
+
+.endTime{
+  width: 40%;
+  text-align: center;
+}
+
+.finishPlan{
+  color: #555555;
+  background-color: #dfdfdf;
+}
+
+.color1{
+  background-color: rgb(130,207,225);
+}
+.color2{
+  background-color: rgb(2,175,184);
+}
+.color3{
+  background-color: rgb(252,251,221);
+}
+.color4{
+  background-color: rgb(253,217,183);
+}
+.color5{
+  background-color: rgb(238,114,104);
+}
+.color6{
+  background-color: rgb(160,220,206);
+}
+.color7{
+  background-color: rgb(215,200,182);
+}
+.color8{
+  background-color: rgb(43,183,201);
+}
+
+.color9{
+  background-color: rgb(253,215,105);
+}
+.color10{
+  background-color: rgb(118,179,184);
 }

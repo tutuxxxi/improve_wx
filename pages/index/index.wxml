@@ -1,6 +1,53 @@
-<view class="container">
-  <view class="userinfo">
+  <!-- 日期显示区域 -->
+<view class="timeArea">
+  <view id="timeIcon">
+    <image src="/image/index/time.png"></image>
+  </view><view id="timeText">
+    <text>{{time}}</text>
   </view>
-  <view class="usermotto">
+</view>
+
+<view wx:if="{{infoList == null}}">
+  <loading>加载中...</loading>
+</view>
+
+<!-- 计划显示区域 -->
+<view class="planArea" wx:if="{{infoList != null}}">
+  <view wx:for="{{infoList}}" wx:for-item="item" wx:for-index="index">  
+
+    <view class="plan finishPlan" wx:if="{{item.finish == true}}">
+      <!-- 图标显示区域 -->
+      <view class="icon">
+        <image src="/image/index/icon{{nums[index] + 1}}_finish.png"></image>
+      </view>
+
+      <!-- 内容显示区域 -->
+      <view class="info">
+        <view class="info_name">{{item.course.cname}}</view>
+        <view class="info_keywords">{{item.course.cKeyword}}</view>
+        <view class="info_date">
+          <view class="startTime">{{item.plan.planStart}}</view>
+          <view class="endTime">{{item.plan.planEnd}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="plan color{{nums[index] + 1}}" wx:if="{{item.finish == false}}">
+      <!-- 图标显示区域 -->
+      <view class="icon">
+        <image src="/image/index/icon{{nums[index] + 1}}.png"></image>
+      </view>
+
+      <!-- 内容显示区域 -->
+      <view class="info">
+        <view class="info_name">{{item.course.cname}}</view>
+        <view class="info_keywords">{{item.course.cKeyword}}</view>
+        <view class="info_date">
+          <view class="startTime">{{item.plan.planStart}}</view>
+          <view class="endTime">{{item.plan.planEnd}}</view>
+        </view>
+      </view>
+    </view>
+
   </view>
 </view>

@@ -1,1 +1,98 @@
 /* pages/allCourse/allCourse.wxss */
+/* 整体样式设置 */
+view {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 导航栏样式设置 */
+.nav_top_all {
+  white-space: nowrap;
+  display: flex;
+  margin: 3px;
+  width: auto;
+}
+
+.nav_top_all_items {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.active {
+  font-size: 15px;
+  flood-color: grey;
+}
+
+.body{
+  color: #e2dcdc;
+}
+
+/* 搜索框设置 */
+.search {
+  margin: 13rpx;
+  color: #000;
+  font-size: 32rpx;
+}
+
+.search_input{
+  background-color: rgb(240, 240, 247);
+  border-radius: 10rpx;
+  width: 100%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1rpx;
+  ming-height: 50rpx;
+}
+
+
+.search_res_text{
+  border-bottom-style: solid;
+  border-bottom-color: #696363;
+  border-bottom-width: 1rpx;
+  margin: 15rpx;
+  margin-left: 0rpx;
+}
+
+/* 主体部分设置 */
+
+.mian_items_{
+  position: relative;
+}
+
+.main_items_img {
+  opacity: 0.5;
+  border-radius: 10rpx;
+  margin: 1%;
+  background-size: 100%;
+  background-position: 10%;
+  position: relative;
+  width: auto;
+  height: 200rpx;
+}
+
+.main_itmes_item {
+  color: rgb(0, 0, 0);
+  margin: 30rpx;
+  opacity: 1;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.main_itmes_item_keyword {
+  font-size: 26rpx;
+  padding-top: 5rpx;
+}
+
+.main_itmes_item_name {
+  font-weight: bolder;
+  font-size: 47rpx;
+  padding-top: 37rpx;
+}
+
+.main_itmes_item_time {
+  font-size: 19rpx;
+  margin-top: 15rpx;
+}
